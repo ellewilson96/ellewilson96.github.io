@@ -26,44 +26,49 @@ I created the files and began writing my code.
 
 I started defining each class, and I began the real bulk of my code within the `cats.rb` file, where I introduced the Nokogiri gem and attempted to scrape.  This is where the frustration began! I really wanted to accomplish the scraping by myself, but I needed a one-on-one session to help me step away and see why I wasn't scraping what I needed. Thankfully, I got more specific with my scraper and was able to get the attributes for each cat:
 
-```  def self.create
-  doc = Nokogiri::HTML(open("http://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimals.aspx?species=All&sex=A&agegroup=All&location=&site=&onhold=A&orderby=name&colnum=4&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=uqn3fk5upf1ol62utcer2x7b0sfg42ytj6j51sefh01e5u64k6&recAmount=&detailsInPopup=No&featuredPet=Include&stageID="))
-  doc.css(".list-animal-info-block").each do |catbio|
-    cat = self.new
-    cat.name = catbio.css(".list-animal-name").text
-    cat.gender = catbio.css(".list-animal-sexSN").text
-    cat.breed = catbio.css(".list-animal-breed").text
-    cat.age = catbio.css(".list-animal-age").text
-    @@all << cat
-  end
-  end```
+```
+*doc = Nokogiri::HTML(open("http://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimals.aspx?species=All&sex=A&agegroup=All&location=&site=&onhold=A&orderby=name&colnum=4&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=uqn3fk5upf1ol62utcer2x7b0sfg42ytj6j51sefh01e5u64k6&recAmount=&detailsInPopup=No&featuredPet=Include&stageID="))
+*   doc.css(".list-animal-info-block").each do |catbio|
+*     cat = self.new
+*     cat.name = catbio.css(".list-animal-name").text
+*     cat.gender = catbio.css(".list-animal-sexSN").text
+*     cat.breed = catbio.css(".list-animal-breed").text
+*     cat.age = catbio.css(".list-animal-age").text
+*     @@all << cat
+*   end
+*end
+```
 
 Next, I knew I would have to put all of my cat instances into a class variable, `@@all`, which would then be accessed by my CLI to print a list of all cats. Here is the partial code from my CLI file that returned a numbered list of cats with their names: 
 
-```def list_cats
-    puts "Today's Available Cats"
-    @cats = AdoptACat::Cats.all
-    @cats.each.with_index(1) do |cat, i|
-    puts "#{i}. #{cat.name}"
-end
-end```
+```
+* def list_cats
+*     puts "Today's Available Cats"
+*     @cats = AdoptACat::Cats.all
+*     @cats.each.with_index(1) do |cat, i|
+*     puts "#{i}. #{cat.name}"
+* end
+* end
+```
 
 To then access more information about the cat, I knew I would have to match either the index to user input, or the cat's name to the input. Since there were multiple cats with the same name, it only made sense to use the index since every cat has a different number and is identifiable that way. This was the code I used to retrieve more information:  
 
-```def more_info
-    puts "Please enter the number of the cat you'd like more information about:"
-    input = gets.strip
-    @cats.each.with_index(1) do |cat, i|
-    if input.to_i == i
-    puts ""
-    puts "#{i}. #{cat.name}"
-    puts "Age: #{cat.age}"
-    puts "Breed: #{cat.breed}"
-    puts "Gender: #{cat.gender}"
-    puts ""
-  end
-end
-end```
+```
+*   def more_info
+*     puts "Please enter the number of the cat you'd like more information about:"
+*     input = gets.strip
+*     @cats.each.with_index(1) do |cat, i|
+*     if input.to_i == i
+*     puts ""
+*     puts "#{i}. #{cat.name}"
+*     puts "Age: #{cat.age}"
+*     puts "Breed: #{cat.breed}"
+*     puts "Gender: #{cat.gender}"
+*     puts ""
+*   end
+* end
+* end
+ ```
 
 Now when a cat's number is entered, it returns the cat's name, age, breed, and gender, which we scraped from the cats file in the above code.
 

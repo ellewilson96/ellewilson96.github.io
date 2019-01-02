@@ -74,7 +74,7 @@ axios.get('http://localhost:3001/api/v1/clues.json')
       })
 ```
 
-`console.log('b')` is printed after d because an `axios.get` request has to be made and *then* the function is called with the promise resolved with the response as the return value - which also logs **b** to the console.
+`console.log('b')` is printed after d because an `axios.get` request has to be made and *then* the function is called - the promise is then resolved with the response as the return value - which also logs **b** to the console.
 
 
 ```

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "A, B, C, D"
-date:       2019-01-02 20:37:19 +0000
+date:       2019-01-02 15:37:19 -0500
 permalink:  a_b_c_d
 ---
 
@@ -50,10 +50,10 @@ So why do the console.log()'s print in this order?
 ```
 callApi = (e) => {
   e.preventDefault();
-  **console.log('a')**
+  console.log('a')
   axios.get('http://localhost:3001/api/v1/clues.json')
 	...
-    **console.log('d')**
+    console.log('d')
   }
 ```
 
@@ -66,7 +66,7 @@ Let's take a look at the API call in which `console.log('b')` is located:
 ```
 axios.get('http://localhost:3001/api/v1/clues.json')
       .then(function(response){
-        **console.log('b')**
+        console.log('b')
         return response.json
       })
       .then(clues => {
@@ -80,16 +80,16 @@ console.log('b') is printed after d because an axios.get request has to be made 
 ```
 callApi = (e) => {
   e.preventDefault();
-  **console.log('a')**
+  console.log('a')
   axios.get('http://localhost:3001/api/v1/clues.json')
       .then(function(response){
-        **console.log('b')**
+        console.log('b')
         return response.json
       })
       .then(clues => {
         console.log('c', clues)
       })
-      **console.log('d')**
+      console.log('d')
   }
 ```
 
@@ -100,12 +100,12 @@ Lastly, **c** prints alongside *undefined*.
 axios.get('http://localhost:3001/api/v1/clues.json')
 
       .then(function(response){
-        **console.log('b')**
+        console.log('b')
         return response.json
       })
 			
       .then(clues => {
-        **console.log('c', clues)**
+        console.log('c', clues)
       })
 ```
 
@@ -125,16 +125,16 @@ In summary...
 ```
 callApi = (e) => {
   e.preventDefault();
-  **console.log('a')**
+  console.log('a')
   axios.get('http://localhost:3001/api/v1/clues.json')
       .then(function(response){
-        **console.log('b')**
+        console.log('b')
         return response.json
       })
       .then(clues => {
-        **console.log('c', clues)**
+        console.log('c', clues)
       })
-      **console.log('d')**
+      console.log('d')
   }
 ```
 

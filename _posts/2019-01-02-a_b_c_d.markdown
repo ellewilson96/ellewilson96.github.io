@@ -119,7 +119,7 @@ There is a second *.then* method on the axios.get response.
 
 Here, **c** is logged but `clues` is undefined. `clues` prints as undefined because it does not have a return value - it has no reference to the response - and it has only been defined as a reference to itself.
 
-In summary...
+# In summary...
 
 
 ```

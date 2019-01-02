@@ -138,10 +138,12 @@ callApi = (e) => {
   }
 ```
 
-**a**
-**d**
-**b**
-**c, undefined**
+```
+a
+d
+b
+c undefined
+```
 
 **a** and **d** are logged first because they are both called immediately after the user clicks the button - and just before any other function calls.
 

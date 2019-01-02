@@ -1,0 +1,154 @@
+---
+layout: post
+title:      "A, B, C, D"
+date:       2019-01-02 20:37:19 +0000
+permalink:  a_b_c_d
+---
+
+
+Today, I will be explaining the order of asynchronous actions in React/Redux applications.
+
+Take a look at the following code:
+
+```
+callApi = (e) => {
+  e.preventDefault();
+  console.log('a')
+  axios.get('http://localhost:3001/api/v1/clues.json')
+      .then(function(response){
+        console.log('b')
+        return response.json
+      })
+      .then(clues => {
+        console.log('c', clues)
+      })
+      console.log('d')
+  }
+```
+
+Which order would the letters print out in?
+
+![](https://media1.tenor.com/images/a8d5235491432f51c9d32db3bae0941f/tenor.gif?itemid=5458781)
+
+My original guess was b, c, clues, and then d. 
+
+This showed that I had a lot of studying to do, as what really printed out was:
+
+```
+a
+d
+b
+c undefined
+```
+
+So why do the console.log()'s print in this order? 
+
+**a** is printed immediately after the e.preventDefault(); right after the click event has been intercepted.
+
+**d** prints after a - removing the code from inside the brackets, it is here:
+
+```
+callApi = (e) => {
+  e.preventDefault();
+  **console.log('a')**
+  axios.get('http://localhost:3001/api/v1/clues.json')
+	...
+    **console.log('d')**
+  }
+```
+
+Since **d** is in the same scope as **a**, and `console.log('d')` is called before the axios.get request, it is printed after **a** and before the API call - which includes **b** and **c**. 
+
+Next, **b** will print.
+
+Let's take a look at the API call in which `console.log('b')` is located:
+
+```
+axios.get('http://localhost:3001/api/v1/clues.json')
+      .then(function(response){
+        **console.log('b')**
+        return response.json
+      })
+      .then(clues => {
+        console.log('c', clues)
+      })
+```
+
+console.log('b') is printed after d because an axios.get request has to be made and *then* the function is called with the promise resolved with the response as the return value - which also logs **b** to the console.
+
+
+```
+callApi = (e) => {
+  e.preventDefault();
+  **console.log('a')**
+  axios.get('http://localhost:3001/api/v1/clues.json')
+      .then(function(response){
+        **console.log('b')**
+        return response.json
+      })
+      .then(clues => {
+        console.log('c', clues)
+      })
+      **console.log('d')**
+  }
+```
+
+Lastly, **c** prints alongside *undefined*.
+
+
+```
+axios.get('http://localhost:3001/api/v1/clues.json')
+
+      .then(function(response){
+        **console.log('b')**
+        return response.json
+      })
+			
+      .then(clues => {
+        **console.log('c', clues)**
+      })
+```
+
+What's going on here?
+
+According to the Mozilla MDN docs,
+
+*"If a handler function doesn't return anything, the promise returned by then gets resolved with an undefined value"*
+
+There is a second *.then* method on the axios.get response.
+
+Here, **c** is logged but `clues` is undefined. `clues` prints as undefined because it does not have a return value - it has no reference to the response - and it has only been defined as a reference to itself.
+
+In summary...
+
+
+```
+callApi = (e) => {
+  e.preventDefault();
+  **console.log('a')**
+  axios.get('http://localhost:3001/api/v1/clues.json')
+      .then(function(response){
+        **console.log('b')**
+        return response.json
+      })
+      .then(clues => {
+        **console.log('c', clues)**
+      })
+      **console.log('d')**
+  }
+```
+
+**a**
+**d**
+**b**
+**c, undefined**
+
+**a** and **d** are logged first because they are both called immediately after the user clicks the button - and just before any other function calls.
+
+**b** is next because its console.log is nested just inside a .then method, and since the function returns a value:
+
+*"If a handler function returns a value, the promise returned by then gets resolved with the returned value as its value"*
+
+Lastly, **c** is logged alongside **undefined** because the promise gets resolved with **c** but with `clues` having no return value, leading it to print as **undefined**.
+
+

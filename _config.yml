@@ -1,11 +1,11 @@
 # Site settings
 author: elle wilson
-title: welcome to my blog
+title: elle wilson
 header-img: img/home-bg.png
 email: eleanorwilsonn@gmail.com
 copyright_name: elle wilson
 description: > # this means to ignore newlines until "baseurl:"
-  full-stack developer
+  full-stack developer. based in NYC.
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  ellewilson96

@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Searching Arrays"
-date:       2019-04-27 19:31:57 +0000
+date:       2019-04-27 15:31:58 -0400
 permalink:  searching_arrays
 ---
 
 
 Since graduating from Flatiron School, I have found that I've needed to supplement my studies with additional research on computer science fundamentals. I come from a fashion background, so I certainly didn't go to college for computer science. 
 
-I recently came across this series of courses on [Brilliant.org](http://brilliant.org, which is based on learning through problem-solving  - a method which I almost always prefer. They have courses ranging from Artificial Neural Networks, to Astrology, to Number Theory. I began with the Computer Science Fundamentals course, and so far I am impressed with the course and its material! 
+I recently came across this series of courses on [Brilliant.org](http://brilliant.org), which is based on learning through problem-solving  - a method which I almost always prefer. They have courses ranging from Artificial Neural Networks, to Astrology, to Number Theory. I began with the Computer Science Fundamentals course, and so far I am impressed with the course and its material! 
 
 I will start this post series with a couple of different ways to accomplish searching an array.
 

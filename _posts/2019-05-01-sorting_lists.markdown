@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Sorting Lists"
-date:       2019-05-01 23:53:21 +0000
+date:       2019-05-01 19:53:22 -0400
 permalink:  sorting_lists
 ---
 
@@ -49,7 +49,7 @@ Its best case is O(n).
 
 However, insertion sort's worst case with large numbers becomes quadratic, and this is more likely than getting the best case.
 
-![](https://www.oreilly.com/library/view/algorithms-in-a/9780596516246/httpatomoreillycomsourceoreillyimages595745.pnghttp://)
+![](https://www.oreilly.com/library/view/algorithms-in-a/9780596516246/httpatomoreillycomsourceoreillyimages595745.png)
 
 
 

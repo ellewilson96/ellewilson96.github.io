@@ -8,7 +8,7 @@ permalink:  big_o_notation
 
 Sometimes, algorithms use test data that isn't reflective of a long-term trend. One that might initially be faster than another could scale to be incredibly slow.
 
-**How do algorithms change as n gets bigger?**
+**How does the algorithm's efficiency change as n gets bigger?**
 
 This is expressed by a concept of Big O notation, or time complexity, which is used in two different ways:
 

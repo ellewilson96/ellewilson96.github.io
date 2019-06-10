@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "My Experience Changing Careers"
-date:       2019-06-10 17:29:35 +0000
+date:       2019-06-10 13:29:36 -0400
 permalink:  my_experience_changing_careers
 ---
 
@@ -79,7 +79,7 @@ Being home all the time as a Capricorn is pleasant at times, but not when unempl
 
 Unfortunately, it doesn’t always work that way, and I received countless rejections. After my experience in February, I also had to be picky about the type of company I wanted to work for. I preferred a smaller company with an interesting product that also cares about its company culture, both in terms of work-life balance and diversity initiatives. 
 
-I spent hours applying to hundreds of companies and after six weeks, four companies invited me to on-site interviews. I didn’t make it to the next round of the first two companies. The third interview I was convinced I was going to get. I had to complete a task in the company’s software platform and present my approach to two senior Solution Architects, as well as their VP of Customer Success. I was beyond disappointed to find out I did not get the role, but I was incredibly proud of myself for taking on a challenging technical presentation.
+I spent hours applying to hundreds of companies and after six weeks, four companies invited me to on-site interviews. I didn’t make it to the next round of the first two companies' interviews. The third interview I was convinced I was going to get. I made it to the final stage - I had to complete a task in the company’s software platform and present my approach to two senior Solution Architects, as well as their VP of Customer Success. I was beyond disappointed to find out I did not get the role, but I was incredibly proud of myself for taking on a challenging technical presentation.
 
 The fourth interview was my last lead. I knew that if I didn’t land this job, it was back to square one, and I was running out of time (and money).
 
@@ -89,7 +89,9 @@ I was in the middle of taking a nap when I received a voicemail from the technic
 
 I am officially an Associate Solutions Architect!
 
-I would absolutely recommend a web development program to anybody. If you know you enjoy creating and learning on a computer for hours (and I mean HOURS), consider the investment and get those foundational skills down. There are so many roles that work with so many different backgrounds and most people will have transferable skills that will help in their learning. I invested a year and approximately $10,000 and I more than doubled my salary in just two months of solid job hunting. I have learned skills that contribute to a more sustainable and by far more inspiring industry. I will be able to continue interacting with clients while creating efficient solution designs, and most importantly, I will be immersed in a corporate technical environment with incredibly smart colleagues who will be invaluable to learn from. 
+I would absolutely recommend a web development program to anybody. If you know you enjoy creating and learning on a computer for hours (and I mean HOURS), consider the investment and get those foundational skills down. There are so many roles that work with so many different backgrounds and most people will have transferable skills that will help in their learning. 
+
+I invested a year and approximately $10,000 and I more than doubled my salary in just two months of solid job hunting. I will be able to continue interacting with clients while creating efficient solution designs, and most importantly, I will be immersed in a corporate technical environment with incredibly smart colleagues. I can't wait to get started!
 
 For any questions about my experience, please get in touch! 
 

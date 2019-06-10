@@ -75,7 +75,7 @@ As you can imagine, managing over twenty people in a destination store five days
 
 In mid-April, I quit my job. I decided that in order to get where I wanted to be, I would have to take a risk and pursue this search full-time. I could not believe that after three years of working at my dream company, I was now pursuing a career in tech and was quitting that job to do it. However, I knew this was the right decision and shortly after I quit, I embraced my new path and refused to look back.
 
-Being home all the time as a Capricorn is pleasant at times, but not when unemployed. I was spending every minute of everyday refreshing every job site, applying to anything I could potentially be qualified for. I was continuing my education and filled a couple of notebooks with endless notes on algorithms, array methods, data structures, and so much more. I felt like a new job must be around the corner because I was putting 100% effort into making it happen.
+Being home all the time as a Capricorn is pleasant at times, but not when unemployed. I was spending every minute of everyday refreshing every job site, applying to anything I could potentially be qualified for. I was continuing my education and filled a couple of notebooks with notes on algorithms, array methods, data structures, and so much more. I felt like a new job must be around the corner because I was putting 100% effort into making it happen.
 
 Unfortunately, it doesn’t always work that way, and I received countless rejections. After my experience in February, I also had to be picky about the type of company I wanted to work for. I preferred a smaller company with an interesting product that also cares about its company culture, both in terms of work-life balance and diversity initiatives. 
 

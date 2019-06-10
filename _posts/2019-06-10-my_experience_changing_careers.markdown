@@ -83,7 +83,7 @@ I spent hours applying to hundreds of companies and during those six weeks, four
 
 The fourth interview was my last lead. I knew that if I didn’t land this job, it was back to square one, and I was running out of time (and money).
 
-From the very first phone call, I got a fantastic impression of the company and it only got better from there. At this point, I felt as though every opportunity was potential for another rejection, so it was hard to continue to show confidence to my interviewers. I had a phone interview shortly after and made it to the next step - a set of on-site interviews. I spent two hours with four different interviewers, each higher in the team hierarchy, and left feeling positive but again, I did not want to get my hopes up. 
+From the very first phone call, I got a fantastic impression of the company and it only got better from there. At this point, I felt as though every opportunity was potential for another rejection, so it was hard to show confidence to my interviewers. I had a phone interview shortly after and made it to the next step - a set of on-site interviews. I spent two hours with four different interviewers, each higher in company hierarchy, and left feeling positive but again, I did not want to get my hopes up. 
 
 I was in the middle of taking a nap when I received a voicemail from the technical recruiter to let me know that they would be offering me the position. I couldn’t believe it. I still can’t believe it. I interviewed on Friday and signed the offer letter the following Tuesday. 
 
